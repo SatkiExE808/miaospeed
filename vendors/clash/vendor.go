@@ -3,10 +3,10 @@ package clash
 import (
 	"context"
 	"fmt"
-	"github.com/Dreamacro/clash/component/resolver"
+	"github.com/metacubex/mihomo/component/resolver"
 	"net"
 
-	"github.com/Dreamacro/clash/constant"
+	"github.com/metacubex/mihomo/constant"
 	"github.com/moshaoli688/miaospeed/interfaces"
 )
 

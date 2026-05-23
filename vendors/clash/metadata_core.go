@@ -3,10 +3,11 @@
 package clash
 
 import (
+	"net/netip"
 	"net/url"
 	"strconv"
 
-	"github.com/Dreamacro/clash/constant"
+	"github.com/metacubex/mihomo/constant"
 )
 
 func urlToMetadata(rawURL string, network constant.NetWork) (addr constant.Metadata, err error) {
@@ -32,11 +33,12 @@ func urlToMetadata(rawURL string, network constant.NetWork) (addr constant.Metad
 		return
 	}
 
+	// Mihomo uses netip.Addr for DstIP and uint16 for DstPort (different from Dreamacro/clash).
 	addr = constant.Metadata{
 		NetWork: network,
 		Host:    u.Hostname(),
-		DstIP:   nil,
-		DstPort: constant.Port(portInt), // 将整数转换为 constant.Port 类型
+		DstIP:   netip.Addr{},
+		DstPort: uint16(portInt),
 	}
 	return
 }
