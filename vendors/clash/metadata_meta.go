@@ -5,7 +5,6 @@ package clash
 import (
 	"fmt"
 	"github.com/Dreamacro/clash/constant"
-	"net/netip"
 	"net/url"
 	"strconv"
 )
@@ -34,8 +33,8 @@ func urlToMetadata(rawURL string, network constant.NetWork) (addr constant.Metad
 	addr = constant.Metadata{
 		NetWork: network,
 		Host:    u.Hostname(),
-		DstIP:   netip.Addr{},
-		DstPort: uint16(uintPort),
+		DstIP:   nil,
+		DstPort: constant.Port(uintPort),
 	}
 	return
 }
