@@ -20,6 +20,16 @@ config.yaml
 */embeded/*
 !*/embeded/.gitkeep
 !*/embeded/predefined.js
+# SatkiExE808: stub embed files are committed
+!utils/embeded/BUILDTOKEN.key
+!preconfigs/embeded/ca-certificates.crt
+!preconfigs/embeded/speedtesturl
+!preconfigs/embeded/miaokoCA
+!preconfigs/embeded/miaokoCA/miaoko.crt
+!preconfigs/embeded/miaokoCA/miaoko.key
+!engine/embeded/default_geoip.js
+!engine/embeded/default_ip.js
+
 
 # intermediates
 emojis
